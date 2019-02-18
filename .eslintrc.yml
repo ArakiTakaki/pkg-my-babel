@@ -1,0 +1,26 @@
+env:
+  browser: true
+  commonjs: true
+  es6: true
+globals:
+  Atomics: readonly
+  SharedArrayBuffer: readonly
+parserOptions:
+  ecmaVersion: 2018
+parser: babel-eslint
+extends:
+  - eslint:recommended
+  - plugin:prettier/recommended
+  - eslint-config-prettier
+  - prettier
+rules:
+  prettier/prettier:
+    - error
+    - singleQuote: true
+    - linebreak-style: true
+    - semi: true
+  indent:
+    - error
+    - 2
+  no-unused-vars:
+    - warn
